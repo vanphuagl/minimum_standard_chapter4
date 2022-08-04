@@ -1,4 +1,190 @@
 /* Header
 ------------------------------------------------------------*/
 .c-header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  //   left: 0;
+  right: 0;
+  background-color: rgba($color: $white-cl, $alpha: 0.8);
+  z-index: 100;
+
+  @include mq(lg, max) {
+    height: 90px;
+    background-color: $white-cl;
+  }
+  @include mq(md, max) {
+    height: 45px;
+  }
+
+  .l-container {
+    max-width: 1580px;
+    margin: auto;
+    padding-left: 20px;
+
+    @include mq(lg, max) {
+      padding: 0 40px;
+    }
+    @include mq(md, max) {
+      padding: 0 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 1.8rem;
+        line-height: 4.4;
+        font-weight: bold;
+        margin-left: 13px;
+      }
+    }
+
+    @include mq(xl, max) {
+      span {
+        margin-left: 10px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+      height: 80px;
+
+      li {
+        height: 100%;
+        @include mid(true);
+        text-align: center;
+        position: relative;
+
+        a {
+          font-size: 1.6rem;
+          line-height: 1.75;
+          font-weight: bold;
+          letter-spacing: 1.6px;
+          padding: 0 18px;
+          background-image: none;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 70%;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-image: url("./assets/img/logo-hover.png");
+            background-size: 50%;
+          }
+
+          @include mq(xl, max) {
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    &--green {
+      width: 140px;
+      background-color: #40a62a;
+
+      & > a {
+        padding: 0;
+        width: 100%;
+
+        &:hover {
+          background-image: none !important;
+        }
+      }
+    }
+    &--blue {
+      width: 140px;
+      background-color: #48b7d0;
+
+      & > a {
+        padding: 0;
+        width: 100%;
+
+        &:hover {
+          background-image: none !important;
+        }
+      }
+    }
+
+    @include mq(xl, max) {
+      &--blue,
+      &--green {
+        width: 130px;
+      }
+    }
+  }
+
+  &__item:hover > &__nested {
+    visibility: visible;
+    opacity: 1;
+    top: 80px;
+  }
+
+  &__nested {
+    position: absolute;
+    top: 60px;
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.53);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+
+    ul {
+      flex-direction: column;
+      height: auto;
+
+      li {
+        padding: 0 15px;
+        width: 100%;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid rgba(183, 183, 183, 0.27);
+          padding: 15px 0;
+          width: 100%;
+          font-weight: 400;
+
+          &:hover {
+            background-image: none;
+          }
+
+          p {
+            font-size: 1.6rem;
+            line-height: 2;
+            color: $white-cl;
+            letter-spacing: 1.6px;
+          }
+
+          figure {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,13 +1,11 @@
 //baseWidth
 $base-width: 1920px;
 
-$main-fonts: "Noto Sans JP", "Noto Serif JP", "Noto Serif JP", "Noto Serif JP",
-    "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic,
-    "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo,
-    "ＭＳ Ｐゴシック", "MS PGothic", "Roboto", "Oswald", sans-serif;
+$main-fonts: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Lora,
+    "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Yu Mincho", "メイリオ", "Meiryo", sans-serif;
 
 //color common
-$main-text-cl: #000;
+$main-text-cl: #333;
 $black-cl: #000;
 $white-cl: #fff;
-$gray-cl: #ede;
+$gray-cl: #d3d3d3;
