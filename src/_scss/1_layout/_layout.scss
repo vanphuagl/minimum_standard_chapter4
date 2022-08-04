@@ -1,0 +1,97 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    background-color: $white-cl;
+    font-family: $main-fonts;
+    color: $main-text-cl;
+    font-weight: 400;
+    font-size: 2.1rem;
+    position: relative;
+    overflow-x: hidden;
+    // min-width: $base-width;
+    // user-select: none;
+    // -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+//-------------------------------------------------------
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+button {
+    border: unset;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+p,
+span,
+dl,
+dt,
+dd {
+    display: block;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.is-hidden {
+    display: none;
+}
+
+@include mq(lg, max) {
+    img {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 h5,
+    h6 {
+        line-height: 1.2;
+    }
+}
+@include mq(md, max) {
+    html {
+        font-size: 31.25%;
+    }
+}
+
+main {
+    // padding: 0px 0 100px;
+}
+
+section {
+    // padding: 50px 0 90px;
+}
+
+//-------------------------------------------------------
+.l-container {
+    width: $base-width;
+    margin: 0 auto;
+    position: relative;
+}
+//-------------------------------------------------------

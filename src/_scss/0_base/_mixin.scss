@@ -1,0 +1,81 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+    *zoom: 1;
+
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+//============================================
+// Mid
+//============================================
+@mixin mid($flex: false) {
+    @if $flex == false {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    } @else {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@mixin midimg($maxwidth: initial) {
+    max-width: $maxwidth;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    @include mid;
+}
+
+// ---------------------------------------------------------------
+//  Media query
+// ---------------------------------------------------------------
+
+$mq-breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1240px,
+    "xs-max": 599px,
+    "sm-max": 959px,
+    "md-max": 1279px,
+    "xl-max": 1600px,
+    "lg-max": 1920px,
+);
+
+@mixin mq($breakpoint: md, $rule: min, $subtraction: true) {
+    $breakpoint: map_get($mq-breakpoints, $breakpoint);
+
+    @if $rule==max and $subtraction {
+        $breakpoint: $breakpoint - 1;
+    }
+
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
