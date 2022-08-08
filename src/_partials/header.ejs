@@ -1,4 +1,4 @@
-<!-- ------------------------------- HEADER -------------------------------- -->
+<!-- HEADER -->
 <header class="c-header">
   <div class="l-container">
     <!-- NAV PC -->
@@ -19,7 +19,7 @@
             <a href="#">事業紹介</a>
             <div class="c-header__nested">
               <ul>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>防災・減災業務</p>
                     <figure>
@@ -27,7 +27,7 @@
                     </figure>
                   </a>
                 </li>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>ICT・BIM/CIM</p>
                     <figure>
@@ -35,7 +35,7 @@
                     </figure>
                   </a>
                 </li>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>測量・設計業務</p>
                     <figure>
@@ -43,7 +43,7 @@
                     </figure>
                   </a>
                 </li>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>調査業務</p>
                     <figure>
@@ -55,12 +55,12 @@
             </div>
           </li>
           <li class="c-header__item"><a href="#">実績紹介</a></li>
-          <li class="c-header__item"><a href="#">事業紹介</a></li>
+          <li class="c-header__item"><a href="#">技術資料</a></li>
           <li class="c-header__item c-header__item--green">
             <a href="#">技術資料</a>
             <div class="c-header__nested">
               <ul>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>私たちの仕事</p>
                     <figure>
@@ -68,7 +68,7 @@
                     </figure>
                   </a>
                 </li>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>先輩社員の声</p>
                     <figure>
@@ -76,7 +76,7 @@
                     </figure>
                   </a>
                 </li>
-                <li>
+                <li class="c-header__nesteditem">
                   <a href="#">
                     <p>募集要項</p>
                     <figure>
@@ -93,13 +93,95 @@
     </div>
 
     <!-- NAV SP -->
-    <div class="c-header__wrappersp sp-only">
+    <div class="c-header__wrappersp">
       <div class="c-header__logosp">
         <a href="#">
           <figure>
-            <img src="./assets/img/header-logo-sp.png" alt="logo-sp">
+            <img src="./assets/img/header-logo-sp.png" alt="logo-sp" class="c-header__imgsp">
           </figure>
         </a>
+      </div>
+
+      <div class="c-header__navsp">
+        <input id="showMenu" type="checkbox" hidden class="c-header__iconsp">
+        <label for="showMenu">
+          <img src="./assets/img/menu-open.png" alt="menu-open">
+          <img src="./assets/img/menu-close.png" alt="menu-close">
+        </label>
+
+        <div class="c-header__menu p-menu">
+          <div class="c-header__contact">
+            <p class="c-header__address">
+              〒860-0833　熊本市中央区平成3丁目16番13号
+            </p>
+            <a class="c-header__tel" href="tel:0962855177">tel.<span>096-285-5177</span></a>
+            <p class="c-header__fax">fax.096-285-5188</p>
+          </div>
+
+          <div class="c-header__list">
+            <ul>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>お知らせ</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>会社案内</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp" id="show-navsub1"><span>+</span>事業紹介</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>実績紹介</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>技術資料</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>交通アクセス</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>プライバシーポリシー</a>
+              </li>
+              <li class="c-header__itemsp c-header__itemsp--blue">
+                <a href="#" class="c-header__linksp" id="show-navsub2"><span>+</span>採用情報</a>
+              </li>
+              <li class="c-header__itemsp c-header__itemsp--green">
+                <a href="#" class="c-header__linksp"><span>></span>お問い合わせ</a>
+              </li>
+            </ul>
+
+            <p id="goBack"><span>&lt;</span>戻る</p>
+
+            <ul class="c-header__sub1 p-navsub1">
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>事業紹介（インデックス）</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>防災・減災業務</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>ICT・BIM/CIM</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>測量・設計業務</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>調査業務</a>
+              </li>
+            </ul>
+
+            <ul class="c-header__sub2 p-navsub2">
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>私たちの仕事</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>先輩社員の声</a>
+              </li>
+              <li>
+                <a href="#" class="c-header__linksp"><span>></span>募集要項</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

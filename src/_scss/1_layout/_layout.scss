@@ -2,10 +2,12 @@
 ------------------------------------------------------------*/
 html {
     font-size: 62.5%;
-    @include sp {
-        html {
-            font-size: 31.25%;
-        }
+
+    // @include sp {
+    //         font-size: 31.25%;
+    // }
+    @include mq(md, max) {
+        font-size: 31.25%;
     }
 }
 
@@ -24,6 +26,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
 }
+
 //-------------------------------------------------------
 h1,
 h2,
@@ -71,10 +74,6 @@ img {
 }
 
 @include mq(lg, max) {
-    img {
-        max-width: 100%;
-    }
-
     h1,
     h2,
     h3,
@@ -98,4 +97,10 @@ section {
     margin: 0 auto;
     position: relative;
 }
+
+.l-wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
 //-------------------------------------------------------

@@ -1,1 +1,340 @@
-.p-contact {}
+/* --------------------------------- BANNER --------------------------------- */
+.p-banner {
+  margin-top: 80px;
+  background-image: url("./assets/img/contact/bg-contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+
+  @include mq(lg, max) {
+    margin-top: 90px;
+  }
+
+  @include mq(md, max) {
+    margin-top: 45px;
+    height: 120px;
+  }
+
+  .l-container {
+    max-width: 600px;
+    height: 100%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+
+    h2 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: $white-cl;
+      line-height: 1;
+      text-align: center;
+    }
+
+    @include mq(md, max) {
+      padding: 0;
+      align-items: center;
+
+      h2 {
+        font-size: 4rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+/* ---------------------------------- FORM ---------------------------------- */
+.p-form {
+  margin-bottom: 100px;
+
+  @include mq(md, max) {
+    margin-bottom: 50px;
+  }
+
+  .l-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+    padding-top: 50px;
+    width: 100%;
+
+    @include mq(md, max) {
+      padding: 0 20px;
+      padding-top: 25px;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__heading {
+    margin-bottom: 70px;
+
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      line-height: 2;
+      letter-spacing: 2.4px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 2;
+      letter-spacing: 1.4px;
+    }
+
+    @include mq(md, max) {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 3.6rem;
+        letter-spacing: 1.8px;
+        line-height: 1;
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 2.8rem;
+        letter-spacing: 1.4px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 25px;
+    margin: auto;
+
+    @include mq(md, max) {
+      width: 35px;
+      height: 22px;
+    }
+  }
+
+  &__body {
+    form {
+      & > input {
+        display: block;
+        cursor: pointer;
+        background-color: #48b7d0;
+        width: 270px;
+        height: 40px;
+        font-size: 1.6rem;
+        letter-spacing: 1.6px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 40px;
+        text-align: center;
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+        margin: auto;
+        margin-top: 60px;
+
+        @include mq(md, max) {
+          width: 100%;
+          font-size: 3.2rem;
+          letter-spacing: 1.6px;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin-top: 35px;
+    display: flex;
+
+    & > span {
+      background-color: #a1a1a1;
+      min-width: 42px;
+      height: 22px;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      line-height: 22px;
+      text-align: center;
+      margin-top: 6.5px;
+    }
+
+    & > label {
+      width: 95px;
+      font-size: 1.4rem;
+      letter-spacing: 1.4px;
+      line-height: 2;
+      margin-left: 10px;
+      margin-right: 20px;
+      padding-top: 3.5px;
+    }
+
+    & > input {
+      flex-grow: 1;
+      height: 35px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    }
+
+    &--require > span {
+      background-color: #40a62a !important;
+    }
+
+    &.is-nospacing > label {
+      letter-spacing: -0.2px;
+
+      @include mq(md, max) {
+        letter-spacing: 1.4px;
+      }
+    }
+
+    & > textarea {
+      flex-grow: 1;
+      height: 190px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      text-align: left;
+    }
+
+    @include mq(md, max) {
+      margin-top: 20px;
+      flex-wrap: wrap;
+
+      & > span {
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+      }
+
+      & > label {
+        width: auto;
+        font-size: 2.8rem;
+        letter-spacing: 1.4px;
+      }
+
+      & > input {
+        width: 100%;
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+        margin-top: 5px;
+      }
+
+      & > textarea {
+        margin-top: 5px;
+        width: 100%;
+        height: 120px;
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+
+  &__box {
+    flex-grow: 1;
+
+    & > input {
+      width: 100%;
+      height: 35px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      margin-top: 10px;
+
+      @include mq(md, max) {
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+      }
+    }
+
+    @include mq(md, max) {
+      width: 100%;
+    }
+  }
+
+  &__boxwrap {
+    display: flex;
+
+    & > span {
+      font-size: 1.4rem;
+      letter-spacing: 1.4px;
+      line-height: 35px;
+    }
+
+    & > input {
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    & > select {
+      width: 130px;
+      height: 35px;
+      padding-left: 10px;
+      padding-right: 20px;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      color: #ccc;
+      cursor: pointer;
+
+      & > option {
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 20px;
+        color: #333;
+      }
+    }
+
+    @include mq(md, max) {
+      margin-top: 5px;
+
+      span {
+        font-size: 2.8rem;
+        letter-spacing: 1.4px;
+      }
+
+      input {
+        width: 110px;
+        margin-right: 10px;
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+      }
+
+      select {
+        width: auto;
+        flex-grow: 1;
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+}
