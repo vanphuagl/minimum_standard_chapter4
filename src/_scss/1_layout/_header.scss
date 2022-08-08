@@ -103,7 +103,7 @@
             transition: all 0.5s ease-in-out;
 
             &:hover {
-                background-image: url("./assets/img/logo-hover.png");
+                background-image: url("../../assets/img/logo-hover.png");
                 background-size: 50%;
             }
 
@@ -291,7 +291,7 @@
         right: 0;
         background-color: $white-cl;
         height: calc(100vh - 90px);
-        padding-top: 40px;
+        padding-top: 30px;
         overflow-y: auto;
         transition: all 0.3s ease-in-out;
 
@@ -301,7 +301,7 @@
 
         @include mq(md, max) {
             top: 45px;
-            padding-top: 20px;
+            padding-top: 15px;
             height: calc(100vh - 45px);
         }
     }

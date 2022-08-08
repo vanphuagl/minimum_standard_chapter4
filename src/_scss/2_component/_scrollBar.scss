@@ -1,0 +1,17 @@
+.c-scrollbar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 101;
+    width: 0;
+    height: 5px;
+    background-color: #40a62a;
+    transition: 0.5s;
+
+    @include mq(lg, max) {
+        top: 91px;
+    }
+    @include sp {
+        top: 46px;
+    }
+}

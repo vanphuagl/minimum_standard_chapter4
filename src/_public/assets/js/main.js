@@ -1,3 +1,6 @@
+/* eslint-disable indent */
+/*eslint linebreak-style: ["error", "windows"]*/
+
 let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
 window.onbeforeunload = function () {
@@ -21,14 +24,14 @@ let prevPost = $("#prev");
 let currentSlide = 1;
 let currentPost = 0;
 
-// reality intro
+// reality
 let realityList = $(".p-reality__list");
+let realityListItems = $$(".p-reality__list > li");
 let btnLeft = $(".p-reality__btnleft");
 let btnRight = $(".p-reality__btnright");
 let currentIndex = 0;
 
-// end varibales
-// header
+/* --------------------------------- SCROLL TO TOP --------------------------------- */
 window.onscroll = function () {
   handleScrollTopHeader();
 };
@@ -39,6 +42,7 @@ function handleScrollTopHeader() {
     document.documentElement.scrollTop ||
     document.body.scrollTop ||
     0;
+
   if (scrollTopHeader > 50) {
     header.classList.add("is-active");
   } else {
@@ -52,34 +56,53 @@ function handleScrollTopHeader() {
   }
 }
 
+/* ---------------------------- SCROLL BAR HEADER --------------------------- */
+window.addEventListener("load", () => {
+  const scrollBar = document.querySelector(".c-scrollbar");
+  window.addEventListener("scroll", function () {
+    let scrollY = window.pageYOffset;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    scrollBar.style.width = (scrollY / height) * 100 + "%";
+  });
+});
+
+/* ---------------------------------- MENU ---------------------------------- */
+const navToggle = $("#showMenu");
+const bodyOverflow = $("body");
+
+navToggle.addEventListener("click", () => {
+  bodyOverflow.classList.toggle("is-notscroll");
+});
+
+/* --------------------------------- SUBMENU -------------------------------- */
 goBack.onclick = function () {
   headerNavList.classList.remove("is-navsub1", "is-navsub2");
 };
-
 showNavSub1.onclick = function () {
   headerNavList.classList.add("is-navsub1");
 };
-
 showNavSub2.onclick = function () {
   headerNavList.classList.add("is-navsub2");
 };
 
-// slider
+/* --------------------------------- SLIDER --------------------------------- */
 let clearSlider = function () {
   for (let i = 0; i < sliderControl.length; i++) {
     slider.classList.remove(`p-slider__visual${i + 1}`);
   }
 };
 
-let clearPostSlider = function () {
-  for (let i = 0; i < postNewsItems.length; i++) {
-    postNews.classList.remove(`is-next${i}`);
-  }
-};
-
 let clearSliderControl = function () {
   for (let i = 0; i < sliderControl.length; i++) {
     sliderControl[i].classList.remove("is-active");
+  }
+};
+
+let clearPostSlider = function () {
+  for (let i = 0; i < postNewsItems.length; i++) {
+    postNews.classList.remove(`is-next${i}`);
   }
 };
 
@@ -104,6 +127,9 @@ let nextSlider = function () {
   renderSlider();
 };
 
+slider.classList.add("p-slider__visual1");
+
+/* ---------------------------------- POST ---------------------------------- */
 let nextPostNews = function () {
   clearPostSlider();
   currentPost = currentPost >= postNewsItems.length ? 1 : currentPost + 1;
@@ -115,13 +141,10 @@ let prevPostNews = function () {
   currentPost = currentPost <= 0 ? postNewsItems.length - 1 : currentPost - 1;
   postNews.classList.add(`is-next${currentPost}`);
 };
-
-slider.classList.add("p-slider__visual1");
 prevPost.onclick = prevPostNews;
 nextPost.onclick = nextPostNews;
 
-// reality intro
-let realityListItems = $$(".p-reality__list > li");
+/* --------------------------------- REALITY -------------------------------- */
 let clearRealityListItems = function () {
   for (let i = 0; i < realityListItems.length; i++) {
     realityList.classList.remove(`is-next${i}`);
@@ -141,12 +164,12 @@ let nextRealityItem = function () {
     currentIndex >= realityListItems.length - 1 ? 0 : currentIndex + 1;
   realityList.classList.add(`is-next${currentIndex}`);
 };
-
 btnLeft.onclick = prevRealityItem;
 btnRight.onclick = nextRealityItem;
 
-let autoSlide = setInterval(() => {
+/* -------------------------------- INTERVAL -------------------------------- */
+setInterval(() => {
   nextSlider();
   nextPostNews();
   nextRealityItem();
-}, 5000);
+}, 8000);

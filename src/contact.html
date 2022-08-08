@@ -1,111 +1,113 @@
 <%- include('_layouts/layout', { title: 'Contact' }); -%>
 
-    <!-- @meta -->
-    <meta name="description" content="WIST">
-    <meta name="keywords" content="Html, Css, Javascript">
-    <!-- @@meta -->
+<!-- @meta -->
+<meta name="description" content="WIST">
+<meta name="keywords" content="Html, Css, Javascript">
+<!-- @@meta -->
 
-    <!-- @content -->
-    <main class="l-main">
-        <!-- BANNER -->
-        <section class="p-banner">
-            <div class="l-container">
-                <h2>お問い合わせ</h2>
-            </div>
-        </section>
-        <!-- END BANNER -->
+<!-- @content -->
+<main class="l-main">
+    <!-- BANNER -->
+    <section class="p-banner">
+        <div class="l-container">
+            <h2>お問い合わせ</h2>
+        </div>
+    </section>
+    <!-- END BANNER -->
 
-        <!-- FORM -->
-        <section class="p-form">
-            <div class="l-container">
-                <div class="p-form__wrapper">
-                    <div class="p-form__heading">
-                        <figure class="p-form__logo">
-                            <img src="./assets/img/logo.gif" alt="logo">
-                        </figure>
-                        <h2>お問い合わせフォーム</h2>
-                        <p>
-                            株式会社アイエステーへのお問い合わせ専用フォームです。弊社へのご質問・ご相談などありましたらどうぞお気軽にご連絡ください。後日メールまたはお電話にて返信いたします。
-                        </p>
-                    </div>
+    <!-- FORM -->
+    <section class="p-form">
+        <div class="l-container">
+            <div class="p-form__wrapper">
+                <div class="p-form__heading">
+                    <figure class="p-form__logo">
+                        <img src="./assets/img/logo.gif" alt="logo">
+                    </figure>
+                    <h2>お問い合わせフォーム</h2>
+                    <p>
+                        株式会社アイエステーへのお問い合わせ専用フォームです。弊社へのご質問・ご相談などありましたらどうぞお気軽にご連絡ください。後日メールまたはお電話にて返信いたします。
+                    </p>
+                </div>
 
-                    <div class="p-form__body">
-                        <form action="/" method="get">
-                            <div class="p-form__item">
-                                <span>任意</span>
-                                <label for="companyName">法人名</label>
-                                <input id="companyName" name="info" type="text" placeholder="株式会社アイエステー">
-                            </div>
+                <div class="p-form__body">
+                    <form action="/" method="get">
+                        <div class="p-form__item">
+                            <span>任意</span>
+                            <label for="companyName">法人名</label>
+                            <input id="companyName" name="info" type="text" placeholder="株式会社アイエステー">
+                        </div>
 
-                            <div class="p-form__item p-form__item--require">
-                                <span>必須</span>
-                                <label for="name">お名前</label>
-                                <input id="name" name="info" type="text" placeholder="熊本 太郎">
-                            </div>
+                        <div class="p-form__item p-form__item--require">
+                            <span>必須</span>
+                            <label for="name">お名前</label>
+                            <input id="name" name="info" type="text" placeholder="熊本 太郎">
+                        </div>
 
-                            <div class="p-form__item p-form__item--require is-nospacing">
-                                <span>必須</span>
-                                <label for="email">メールアドレス</label>
-                                <input id="email" name="info" type="email" placeholder="example@gmail.com">
-                            </div>
+                        <div class="p-form__item p-form__item--require is-nospacing">
+                            <span>必須</span>
+                            <label for="email">メールアドレス</label>
+                            <input id="email" name="info" type="email" placeholder="example@gmail.com">
+                        </div>
 
-                            <div class="p-form__item p-form__item--require">
-                                <span>必須</span>
-                                <label for="phonenumber">電話番号</label>
-                                <input id="phonenumber" name="info" type="text" placeholder="00-0000-0000">
-                            </div>
+                        <div class="p-form__item p-form__item--require">
+                            <span>必須</span>
+                            <label for="phonenumber">電話番号</label>
+                            <input id="phonenumber" name="info" type="text" placeholder="00-0000-0000">
+                        </div>
 
-                            <div class="p-form__item">
-                                <span>任意</span>
-                                <label for="address">ご住所</label>
-                                <div class="p-form__box">
-                                    <div class="p-form__boxwrap">
-                                        <span>〒</span>
-                                        <input id="address" name="info" type="text" placeholder="00-0000">
-                                        <select id="province" name="infoForm">
-                                            <option value="都道府県" selected>
-                                                --都道府県--
-                                            </option>
-                                            <option value="都道府県">--都道府--</option>
-                                            <option value="都道府県">--都道--</option>
-                                            <option value="都道府県">--都--</option>
-                                        </select>
-                                    </div>
-                                    <input name="info" type="text" placeholder="ビル・マンションなど">
-                                    <input name="info" type="text" placeholder="市町村区番地">
+                        <div class="p-form__item">
+                            <span>任意</span>
+                            <label for="address">ご住所</label>
+                            <div class="p-form__box">
+                                <div class="p-form__boxwrap">
+                                    <span>〒</span>
+                                    <input id="address" name="info" type="text" placeholder="00-0000">
+                                    <select id="province" name="infoForm">
+                                        <option value="都道府県" selected>
+                                            --都道府県--
+                                        </option>
+                                        <option value="都道府県">--都道府--</option>
+                                        <option value="都道府県">--都道--</option>
+                                        <option value="都道府県">--都--</option>
+                                    </select>
                                 </div>
+                                <input name="info" type="text" placeholder="ビル・マンションなど">
+                                <input name="info" type="text" placeholder="市町村区番地">
                             </div>
+                        </div>
 
-                            <div class="p-form__item p-form__item--require">
-                                <span>必須</span>
-                                <label for="survey">お問い合わせ 内容</label>
-                                <textarea id="survey" name="info" placeholder="お問い合わせ内容をご入力ください。"></textarea>
-                            </div>
+                        <div class="p-form__item p-form__item--require">
+                            <span>必須</span>
+                            <label for="survey">お問い合わせ 内容</label>
+                            <textarea id="survey" name="info" placeholder="お問い合わせ内容をご入力ください。"></textarea>
+                        </div>
 
-                            <input type="submit" value="確認する >">
-                        </form>
-                    </div>
+                        <input type="submit" value="確認する >" class="p-form__submit">
+                    </form>
                 </div>
             </div>
-        </section>
-        <!-- END FORM -->
-    </main>
-
-    <!-- SCROLL TO TOP -->
-    <a href="#" class="c-scroll">
-        <div class="c-scroll__btn">
-            <span>^</span>
-            <p>TOP</p>
         </div>
-        <figure>
-            <img src="./assets/img/scrolltop.png" alt="scroll-to-top">
-        </figure>
-    </a>
+    </section>
+    <!-- END FORM -->
+</main>
 
-    <!-- @@content -->
+<!-- SCROLL BAR HEADER -->
+<div class="c-scrollbar"></div>
 
-    <!-- @script -->
-    <script>
-        console.log("contact page");
-    </script>
-    <!-- @@script -->
+<!-- SCROLL TO TOP -->
+<a href="#" class="c-scroll">
+    <div class="c-scroll__btn">
+        <span>^</span>
+        <p>TOP</p>
+    </div>
+    <figure>
+        <img src="./assets/img/scrolltop.png" alt="scroll-to-top">
+    </figure>
+</a>
+<!-- @@content -->
+
+<!-- @script -->
+<script>
+    console.log("contact page");
+</script>
+<!-- @@script -->

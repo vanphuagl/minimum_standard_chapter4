@@ -7,6 +7,7 @@ footer
     .l-container {
         padding: 60px 80px;
         z-index: 1;
+        width: 100%;
 
         @include mq(lg-max, max) {
             padding: 60px 40px;
@@ -106,7 +107,8 @@ footer
             max-width: 200px;
             margin: auto;
             margin-bottom: 2px;
-            padding-right: 15px;
+            // padding-right: 15px;
+            font-weight: 400;
         }
 
         span {
