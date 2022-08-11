@@ -13,6 +13,7 @@ let scrollTop = $(".c-scroll");
 let showNavSub1 = $("#show-navsub1");
 let showNavSub2 = $("#show-navsub2");
 let goBack = $("#goBack");
+let scrollBar = $(".c-scrollbar");
 
 // slider
 let slider = $(".p-slider__wrapper");
@@ -43,10 +44,12 @@ function handleScrollTopHeader() {
     document.body.scrollTop ||
     0;
 
-  if (scrollTopHeader > 50) {
+  if (scrollTopHeader > 70) {
     header.classList.add("is-active");
+    scrollBar.classList.add("is-active");
   } else {
     header.classList.remove("is-active");
+    scrollBar.classList.remove("is-active");
   }
 
   if (scrollTopHeader > window.innerHeight - 80) {
@@ -57,8 +60,7 @@ function handleScrollTopHeader() {
 }
 
 /* ---------------------------- SCROLL BAR HEADER --------------------------- */
-window.addEventListener("load", () => {
-  const scrollBar = document.querySelector(".c-scrollbar");
+window.addEventListener("load", function () {
   window.addEventListener("scroll", function () {
     let scrollY = window.pageYOffset;
     const height =
@@ -72,7 +74,7 @@ window.addEventListener("load", () => {
 const navToggle = $("#showMenu");
 const bodyOverflow = $("body");
 
-navToggle.addEventListener("click", () => {
+navToggle.addEventListener("click", function () {
   bodyOverflow.classList.toggle("is-notscroll");
 });
 
@@ -88,9 +90,47 @@ showNavSub2.onclick = function () {
 };
 
 /* --------------------------------- SLIDER --------------------------------- */
+// let clearSlider = function () {
+//   for (let i = 0; i < sliderControl.length; i++) {
+//     slider.classList.remove(`p-slider__visual${i + 1}`);
+//   }
+// };
+
+// let clearSliderControl = function () {
+//   for (let i = 0; i < sliderControl.length; i++) {
+//     sliderControl[i].classList.remove("is-active");
+//   }
+// };
+
+// let clearPostSlider = function () {
+//   for (let i = 0; i < postNewsItems.length; i++) {
+//     postNews.classList.remove(`is-next${i}`);
+//   }
+// };
+
+// for (let i = 0; i < sliderControl.length; i++) {
+//   sliderControl[i].onclick = function () {
+//     clearSlider();
+//     clearSliderControl();
+//     slider.classList.add(`p-slider__visual${i + 1}`);
+//     sliderControl[i].classList.add("is-active");
+//   };
+// }
+
+// let renderSlider = function () {
+//   clearSlider();
+//   clearSliderControl();
+//   slider.classList.add(`p-slider__visual${currentSlide}`);
+//   sliderControl[currentSlide - 1].classList.add("is-active");
+// };
+
+// let nextSlider = function () {
+//   currentSlide = currentSlide >= sliderControl.length ? 1 : currentSlide + 1;
+//   renderSlider();
+// };
 let clearSlider = function () {
   for (let i = 0; i < sliderControl.length; i++) {
-    slider.classList.remove(`p-slider__visual${i + 1}`);
+    slider.classList.remove("p-slider__visual" + (i + 1));
   }
 };
 
@@ -102,23 +142,24 @@ let clearSliderControl = function () {
 
 let clearPostSlider = function () {
   for (let i = 0; i < postNewsItems.length; i++) {
-    postNews.classList.remove(`is-next${i}`);
+    postNews.classList.remove("is-next" + i);
   }
 };
 
-for (let i = 0; i < sliderControl.length; i++) {
-  sliderControl[i].onclick = function () {
+let controlArr = [0, 1, 2, 3];
+controlArr.forEach(function (e) {
+  sliderControl[e].onclick = function () {
     clearSlider();
     clearSliderControl();
-    slider.classList.add(`p-slider__visual${i + 1}`);
-    sliderControl[i].classList.add("is-active");
+    slider.classList.add("p-slider__visual" + (e + 1));
+    sliderControl[e].classList.add("is-active");
   };
-}
+});
 
 let renderSlider = function () {
   clearSlider();
   clearSliderControl();
-  slider.classList.add(`p-slider__visual${currentSlide}`);
+  slider.classList.add("p-slider__visual" + currentSlide);
   sliderControl[currentSlide - 1].classList.add("is-active");
 };
 
@@ -130,24 +171,55 @@ let nextSlider = function () {
 slider.classList.add("p-slider__visual1");
 
 /* ---------------------------------- POST ---------------------------------- */
+// let nextPostNews = function () {
+//   clearPostSlider();
+//   currentPost = currentPost >= postNewsItems.length ? 1 : currentPost + 1;
+//   postNews.classList.add(`is-next${currentPost}`);
+// };
+
+// let prevPostNews = function () {
+//   clearPostSlider();
+//   currentPost = currentPost <= 0 ? postNewsItems.length - 1 : currentPost - 1;
+//   postNews.classList.add(`is-next${currentPost}`);
+// };
 let nextPostNews = function () {
   clearPostSlider();
   currentPost = currentPost >= postNewsItems.length ? 1 : currentPost + 1;
-  postNews.classList.add(`is-next${currentPost}`);
+  postNews.classList.add("is-next" + currentPost);
 };
 
 let prevPostNews = function () {
   clearPostSlider();
   currentPost = currentPost <= 0 ? postNewsItems.length - 1 : currentPost - 1;
-  postNews.classList.add(`is-next${currentPost}`);
+  postNews.classList.add("is-next" + currentPost);
 };
+
 prevPost.onclick = prevPostNews;
 nextPost.onclick = nextPostNews;
 
 /* --------------------------------- REALITY -------------------------------- */
+// let clearRealityListItems = function () {
+//   for (let i = 0; i < realityListItems.length; i++) {
+//     realityList.classList.remove(`is-next${i}`);
+//   }
+// };
+
+// let prevRealityItem = function () {
+//   clearRealityListItems();
+//   currentIndex =
+//     currentIndex <= 0 ? realityListItems.length - 1 : currentIndex - 1;
+//   realityList.classList.add(`is-next${currentIndex}`);
+// };
+
+// let nextRealityItem = function () {
+//   clearRealityListItems();
+//   currentIndex =
+//     currentIndex >= realityListItems.length - 1 ? 0 : currentIndex + 1;
+//   realityList.classList.add(`is-next${currentIndex}`);
+// };
 let clearRealityListItems = function () {
   for (let i = 0; i < realityListItems.length; i++) {
-    realityList.classList.remove(`is-next${i}`);
+    realityList.classList.remove("is-next" + i);
   }
 };
 
@@ -155,20 +227,21 @@ let prevRealityItem = function () {
   clearRealityListItems();
   currentIndex =
     currentIndex <= 0 ? realityListItems.length - 1 : currentIndex - 1;
-  realityList.classList.add(`is-next${currentIndex}`);
+  realityList.classList.add("is-next" + currentIndex);
 };
 
 let nextRealityItem = function () {
   clearRealityListItems();
   currentIndex =
     currentIndex >= realityListItems.length - 1 ? 0 : currentIndex + 1;
-  realityList.classList.add(`is-next${currentIndex}`);
+  realityList.classList.add("is-next" + currentIndex);
 };
+
 btnLeft.onclick = prevRealityItem;
 btnRight.onclick = nextRealityItem;
 
 /* -------------------------------- INTERVAL -------------------------------- */
-setInterval(() => {
+setInterval(function () {
   nextSlider();
   nextPostNews();
   nextRealityItem();

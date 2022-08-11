@@ -133,7 +133,8 @@ footer
             position: relative;
             bottom: auto;
             left: auto;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+            // text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+            text-shadow: 0 0 2px rgb(64, 166, 42, 0.5);
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 50px;
@@ -173,7 +174,7 @@ footer
         max-width: 390px;
         margin: auto;
 
-        a>figure {
+        a > figure {
             display: flex;
             justify-content: center;
         }
@@ -201,7 +202,7 @@ footer
         @include mq(md, max) {
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
 
-            a>figure {
+            a > figure {
                 width: 92px;
                 height: 22px;
                 margin: auto;
