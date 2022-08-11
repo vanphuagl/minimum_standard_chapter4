@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Hirakaku Pro";
+    src: url("../fonts/HiraKakuPro-W6.woff2") format("woff2"),
+        url("../fonts/HiraKakuPro-W6.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "HiraKaku ProN";
+    src: url("../fonts/HiraKakuProN-W3.woff2") format("woff2"),
+        url("../fonts/HiraKakuProN-W3.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}

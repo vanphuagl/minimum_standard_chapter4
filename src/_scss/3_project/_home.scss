@@ -60,8 +60,8 @@
             bottom: 178px;
             transform: translateX(-50%);
             background-color: $white-cl;
-            width: 6px;
-            height: 6px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             opacity: 1;
             animation: mouse 1.5s linear infinite;
@@ -151,7 +151,7 @@
         transform: translateX(-50%);
         text-shadow: 0 0 5px rgba(136, 136, 136, 0.75);
 
-        h2 {
+        h1 {
             text-align: center;
             font-size: 9rem;
             font-family: Lora, sans-serif;
@@ -193,7 +193,7 @@
         @include mq(md, max) {
             top: 22.5px;
 
-            h2 {
+            h1 {
                 letter-spacing: 4.5px;
 
                 span {
@@ -204,7 +204,7 @@
     }
 
     &__visual1 > &__content1 > &__info1 > {
-        h2,
+        h1,
         p {
             opacity: 1;
             visibility: visible;
@@ -868,6 +868,7 @@
             letter-spacing: 3.6px;
             line-height: 1;
             color: #fff;
+            font-weight: bold;
         }
 
         &--red {
@@ -913,6 +914,7 @@
             background-color: #40a62a;
 
             figure {
+                opacity: 0.1;
                 @include mq(md, max) {
                     width: 28px;
                     height: 28px;
@@ -1085,7 +1087,7 @@
             max-width: 410px;
             margin-left: -2px;
 
-            span {
+            sup {
                 display: inline-block;
                 font-size: 2.4rem;
                 letter-spacing: 2.4px;
@@ -1117,7 +1119,7 @@
                 max-width: 100%;
                 margin-left: 0;
 
-                span {
+                sup {
                     font-size: 3.2rem;
                     letter-spacing: 1.6px;
                 }

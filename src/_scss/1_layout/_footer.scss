@@ -100,7 +100,7 @@ footer
         h2 {
             text-align: center;
             font-size: 5rem;
-            font-family: Lora;
+            font-family: Lora, sans-serif;
             color: $white-cl;
             letter-spacing: 0;
             line-height: 0.9;
@@ -115,7 +115,7 @@ footer
             text-align: center;
             display: inline-block;
             font-size: 2rem;
-            font-family: Lora;
+            font-family: Lora, sans-serif;
             color: $white-cl;
             letter-spacing: 2px;
             line-height: 1.5;
@@ -237,7 +237,7 @@ footer
 
     &__tel {
         font-size: 2.6rem;
-        font-family: "Yu Mincho", sans-serif;
+        font-family: "Yu Mincho", serif;
         line-height: 1;
         margin-top: 30px;
         margin-bottom: 12px;
@@ -246,7 +246,7 @@ footer
         span {
             display: inline-block;
             font-size: 3.2rem;
-            font-family: "Yu Mincho", sans-serif;
+            font-family: "Yu Mincho", serif;
             line-height: 1;
             font-weight: bold;
             //   letter-spacing: 3.2px;
@@ -268,7 +268,7 @@ footer
 
     &__fax {
         font-size: 1.6rem;
-        font-family: "Yu Mincho", sans-serif;
+        font-family: "Yu Mincho", serif;
         line-height: 1;
         letter-spacing: 1.6px;
 
