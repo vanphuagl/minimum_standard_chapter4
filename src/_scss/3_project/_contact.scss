@@ -160,6 +160,7 @@
     &__item {
         margin-top: 35px;
         display: flex;
+        position: relative;
 
         > span {
             background-color: #a1a1a1;
@@ -207,6 +208,14 @@
             }
         }
 
+        > .p-email {
+            letter-spacing: -0.2px;
+
+            @include mq(md, max) {
+                letter-spacing: 1.4px;
+            }
+        }
+
         > textarea {
             flex-grow: 1;
             height: 190px;
@@ -216,6 +225,18 @@
             letter-spacing: 1.2px;
             font-family: "Hiragino Kaku Gothic ProN", sans-serif;
             text-align: left;
+        }
+
+        > small {
+            color: #e74c3c;
+            position: absolute;
+            bottom: -26px;
+            right: 0;
+            visibility: hidden;
+        }
+
+        &.error small {
+            visibility: visible;
         }
 
         @include mq(md, max) {
@@ -326,10 +347,9 @@
                     background-color: transparent;
                     border: none;
                     color: #ccc;
-                }    
+                }
             }
         }
-
 
         @include mq(md, max) {
             margin-top: 5px;

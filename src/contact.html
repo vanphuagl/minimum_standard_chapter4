@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="p-form__body">
-                    <form action="/" method="get">
+                    <form action="#" method="GET" id="form">
                         <div class="p-form__item">
                             <span>任意</span>
                             <label for="companyName">法人名</label>
@@ -41,18 +41,22 @@
                             <span>必須</span>
                             <label for="name">お名前</label>
                             <input id="name" name="info" type="text" placeholder="熊本 太郎">
-                        </div>
-
-                        <div class="p-form__item p-form__item--require is-nospacing">
-                            <span>必須</span>
-                            <label for="email">メールアドレス</label>
-                            <input id="email" name="info" type="email" placeholder="example@gmail.com">
+                            <small>Error message</small>
                         </div>
 
                         <div class="p-form__item p-form__item--require">
                             <span>必須</span>
-                            <label for="phonenumber">電話番号</label>
-                            <input id="phonenumber" name="info" type="text" placeholder="00-0000-0000">
+                            <label for="email" class="p-email">メールアドレス</label>
+                            <input id="email" name="info" type="email" placeholder="example@gmail.com">
+                            <small>Error message</small>
+                        </div>
+
+                        <div class="p-form__item p-form__item--require">
+                            <span>必須</span>
+                            <label for="phone">電話番号</label>
+                            <input id="phone" name="info" type="tel" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
+                                placeholder="00-0000-0000">
+                            <small>Error message</small>
                         </div>
 
                         <div class="p-form__item">
@@ -80,6 +84,7 @@
                             <span>必須</span>
                             <label for="survey">お問い合わせ 内容</label>
                             <textarea id="survey" name="info" placeholder="お問い合わせ内容をご入力ください。"></textarea>
+                            <small>Error message</small>
                         </div>
 
                         <input type="submit" value="確認する >" class="p-form__submit">
@@ -105,8 +110,8 @@
     </figure>
 </a>
 <!-- @@content -->
-
 <!-- @script -->
+<script src="/assets/js/app.js"></script>
 <script>
     console.log("contact page");
 </script>
