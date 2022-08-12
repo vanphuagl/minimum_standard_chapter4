@@ -79,7 +79,7 @@ const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const survey = document.getElementById("survey");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   checkInputs();
 });
@@ -124,8 +124,15 @@ function checkInputs() {
       message: surveyValue,
     };
     let resultString = "";
-    for (const [key, value] of Object.entries(data)) {
-      resultString += `${key}: ${value}\n`;
+    // for (const [key, value] of Object.entries(data)) {
+    //   resultString += `${key}: ${value}\n`;
+    // }
+
+    for (var key in data) {
+      if (data.hasOwnProperty(key)) {
+        var value = data[key];
+        resultString += key + ": " + value + "\n";
+      }
     }
     alert("Your mail has been sent successfully!\n" + resultString);
   }
