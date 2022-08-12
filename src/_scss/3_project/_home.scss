@@ -1046,6 +1046,23 @@
             }
         }
 
+        @media only screen and (max-width: 1800px) {
+            figure {
+                left: -200px;
+            }
+        }
+
+        @include mq(lg-max, max) {
+            figure {
+                left: -160px;
+            }
+        }
+
+        @include mq(xl, max) {
+            figure {
+                left: -60px;
+            }
+        }
         @include mq(lg, max) {
             width: 100%;
             margin-bottom: 50px;
