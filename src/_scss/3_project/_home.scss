@@ -666,7 +666,8 @@
                 }
 
                 @include mq(md, max) {
-                    height: 225px;
+                    // height: 225px;
+                    height: 195px;
                     padding: 15px;
                 }
             }
@@ -947,9 +948,14 @@
 
             figure {
                 img {
-                    width: 39px;
-                    height: 28px;
+                    // width: 39px;
+                    // height: 28px;
                 }
+            }
+
+            &--blue > span {
+                line-height: 0.5;
+                letter-spacing: 2px;
             }
         }
     }
@@ -1123,17 +1129,16 @@
 
             h2 {
                 font-size: 3.2rem;
-                letter-spacing: 1px;
+                letter-spacing: 0.6px;
                 max-width: 100%;
                 margin-left: 0;
-
-                margin-top: 0;
+                margin-top: -2px;
 
                 sup {
                     font-size: 3.2rem;
                     letter-spacing: 1.6px;
-
-                    position: unset;
+                    top: 5px;
+                    left: 3px;
                 }
             }
         }
@@ -1170,9 +1175,13 @@
         }
 
         @include mq(md, max) {
-            font-size: 2.4rem;
-            letter-spacing: 0;
-            line-height: 1.7;
+            // font-size: 2.4rem;
+            // letter-spacing: 0;
+            // line-height: 1.7;
+            position: relative;
+            top: -3px;
+            left: -1px;
+            letter-spacing: -0.2px;
 
             span {
                 font-size: 2.4rem;
@@ -1456,8 +1465,15 @@
         }
 
         @include mq(md, max) {
-            padding: 10px;
+            // padding: 10px;
+            padding: 5px;
             width: 235px;
+
+            margin-top: 2px;
+
+            a {
+                box-shadow: 0 2px 2px 0 rgb(0 0 0 / 30%);
+            }
 
             &:nth-child(even) {
                 margin-top: 0;
@@ -1534,7 +1550,7 @@
 
             @include mq(md, max) {
                 right: 15px;
-                bottom: 15px;
+                bottom: 12px;
                 font-size: 3rem;
                 letter-spacing: 1.5px;
             }
@@ -1822,7 +1838,7 @@
 
         @include mq(xl-max, max) {
             p {
-                position: unset;
+                // position: unset;
                 letter-spacing: 1.4px;
             }
         }
@@ -1830,14 +1846,16 @@
         @include mq(md, max) {
             p {
                 font-size: 2.4rem;
-                letter-spacing: 1.2px;
+                letter-spacing: 0.3px;
                 line-height: 1.7;
                 max-width: 100%;
-                padding-right: 40px;
+                padding-right: 42px;
+                top: 4px;
+                left: -1px;
             }
 
             span {
-                right: 0;
+                right: -1px;
                 font-size: 3rem;
                 letter-spacing: 1.5px;
             }

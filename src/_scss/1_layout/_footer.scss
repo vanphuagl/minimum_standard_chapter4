@@ -150,21 +150,25 @@ footer
             margin-bottom: 22px;
 
             h2 {
-                max-width: 140px;
+                // max-width: 140px;
+                // letter-spacing: 3px;
+                width: 125px;
+                letter-spacing: 0;
                 font-size: 6rem;
-                letter-spacing: 3px;
                 margin-bottom: 0;
                 padding-right: 0;
             }
 
             span {
                 font-size: 2.4rem;
-                letter-spacing: 1.2px;
+                letter-spacing: 1px;
+                margin-left: -5px;            
             }
 
             p {
                 font-size: 2.4rem;
-                letter-spacing: 2.4px;
+                letter-spacing: 2px;
+                margin-left: 10px;
             }
         }
     }
@@ -211,9 +215,10 @@ footer
             h2 {
                 display: block;
                 font-size: 2.4rem;
-                letter-spacing: 1.2px;
-                margin-top: 15px;
-                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+                margin-top: 13px;
+                margin-bottom: 8px;
+                margin-left: -2px;
             }
 
             span {
@@ -256,14 +261,14 @@ footer
 
         @include mq(md, max) {
             font-size: 3.2rem;
-            letter-spacing: 1.6px;
-            margin-top: 20px;
-            margin-bottom: 15px;
-            margin-right: 0;
+            letter-spacing: 0;
+            margin-top: 7px;
+            margin-bottom: 10px;
+            margin-right: 3px;
 
             span {
                 font-size: 3.6rem;
-                letter-spacing: 1.8px;
+                letter-spacing: 0;
             }
         }
     }
@@ -314,29 +319,40 @@ footer
             @include mq(xl-max, max) {
                 span {
                     margin-left: 10px;
-                    position: unset;
+                    // position: unset;
                 }
             }
 
             @include mq(md, max) {
                 font-size: 2.2rem;
-                letter-spacing: 1.1px;
+                letter-spacing: 0;
 
                 span {
                     font-size: 2.5rem;
-                    margin-left: 7.5px;
+                    margin-left: -0.5px;
                     margin-top: 0;
                     letter-spacing: 0;
+                    left: 6px;
+                    top: -1px;
                 }
             }
         }
 
         @include mq(md, max) {
-            margin-top: 20px;
-            margin-bottom: 25px;
+            margin-top: 18px;
+            margin-bottom: 23px;
             margin-left: auto;
             margin-right: auto;
             max-width: 230px;
+
+            a:last-child {
+                position: relative;
+                left: -10px;
+
+                span {
+                    left: 12px;
+                }
+            }
         }
     }
 
@@ -348,6 +364,7 @@ footer
         @include mq(md, max) {
             font-size: 2rem;
             letter-spacing: 1px;
+            padding-bottom: 16px;
         }
     }
 }
