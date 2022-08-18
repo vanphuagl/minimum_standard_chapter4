@@ -314,6 +314,10 @@ footer
                 margin-left: -5px;
                 position: relative;
                 left: 13px;
+
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                   margin-top: -15px;
+                }
             }
 
             @include mq(xl-max, max) {

@@ -88,7 +88,7 @@
             font-size: 2.4rem;
             font-weight: bold;
             line-height: 1.8;
-            letter-spacing: 1.5px;    
+            letter-spacing: 1.5px;
         }
 
         p {
@@ -186,6 +186,10 @@
             margin-left: 9px;
             margin-right: 16px;
             padding-top: 3.5px;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                width: 100px;
+            }
         }
 
         > input {
@@ -231,13 +235,18 @@
             font-family: "Hiragino Kaku Gothic ProN", sans-serif;
             text-align: left;
             margin-right: 7px;
+            resize: none;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                line-height: 1;
+            }
         }
 
         > small {
             color: #e74c3c;
             position: absolute;
-            bottom: -26px;
-            right: 0;
+            bottom: -25px;
+            left: 165px;
             visibility: hidden;
         }
 
@@ -277,6 +286,14 @@
                 margin-right: 0;
             }
         }
+
+        @include sp {
+            > small {
+                bottom: -20px;
+                left: 0;
+                font-size: 2rem;
+            }
+        }
     }
 
     &__box {
@@ -298,6 +315,10 @@
             @include mq(md, max) {
                 font-size: 2.4rem;
                 letter-spacing: 1.2px;
+            }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                line-height: 3;
             }
         }
 
@@ -386,5 +407,14 @@
                 letter-spacing: 1.2px;
             }
         }
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    table,
+    input,
+    select,
+    option {
+        line-height: 2.8;
     }
 }

@@ -92,26 +92,26 @@ function checkInputs() {
   const surveyValue = survey.value.trim();
 
   if (usernameValue === "") {
-    setErrorFor(username, "Username cannot be blank");
+    setErrorFor(username, "ユーザー名は空白にできません");
   } else {
     setSuccessFor(username);
   }
 
   if (emailValue === "") {
-    setErrorFor(email, "Email cannot be blank");
+    setErrorFor(email, "電子メールを空白にすることはできません");
   } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "Not a valid email");
+    setErrorFor(email, "有効な電子メールではありません");
   } else {
     setSuccessFor(email);
   }
 
   if (phoneValue === "") {
-    setErrorFor(phone, "Phone cannot be blank");
+    setErrorFor(phone, "電話を空白にすることはできません");
   } else {
     setSuccessFor(phone);
   }
   if (surveyValue === "") {
-    setErrorFor(survey, "Message cannot be blank");
+    setErrorFor(survey, "メッセージを空白にすることはできません");
   } else {
     setSuccessFor(survey);
   }

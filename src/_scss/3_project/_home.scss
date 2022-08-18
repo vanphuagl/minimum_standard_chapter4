@@ -47,8 +47,8 @@
             z-index: 1;
 
             @include mq(md, max) {
-                width: 16px;
-                height: 23px;
+                width: 17px;
+                height: 26px;
                 bottom: 25px;
             }
         }
@@ -67,8 +67,8 @@
             animation: mouse 1.5s linear infinite;
 
             @include mq(md, max) {
-                height: 3px;
-                width: 3px;
+                height: 6px;
+                width: 6px;
                 animation: mouseSp 1.5s linear infinite;
             }
         }
@@ -81,7 +81,7 @@
             opacity: 1;
             visibility: visible;
             transition: all 0.5s linear;
-            animation: zoomBackground 30s linear infinite;
+            // animation: zoomBackground 30s linear infinite;
 
             @include mq(xxl, max) {
                 animation: zoomBackgroundXXL 30s linear infinite;
@@ -93,7 +93,7 @@
 
             @include mq(md, max) {
                 background-image: url("../../assets/img/slider/mainvisual_sp#{$i}.jpg");
-                animation: zoomBackground 30s linear infinite;
+                // animation: zoomBackground 30s linear infinite;
                 height: 390px;
             }
         }
@@ -845,6 +845,10 @@
 
             li {
                 padding: 10px;
+
+                a {
+                    background-position: initial;
+                }
             }
         }
     }
@@ -1149,7 +1153,7 @@
                 letter-spacing: 0.6px;
                 max-width: 100%;
                 margin-left: 0;
-                margin-top: -2px;
+                margin-top: -3px;
 
                 sup {
                     font-size: 3.2rem;
@@ -1192,13 +1196,12 @@
         }
 
         @include mq(md, max) {
-            // font-size: 2.4rem;
-            // letter-spacing: 0;
-            // line-height: 1.7;
+            font-size: 2.4rem;
             position: relative;
             top: -3px;
-            left: -1px;
+            left: -2px;
             letter-spacing: -0.2px;
+            line-height: 1.7;
 
             span {
                 font-size: 2.4rem;
@@ -1803,7 +1806,9 @@
     &__list {
         li {
             &:first-child > a {
+                padding-bottom: 14.5px;
                 @include mq(md, max) {
+                    padding-bottom: 10px;
                     border-top: 1px solid rgb(204, 204, 204);
                 }
             }
@@ -1845,7 +1850,7 @@
             position: absolute;
             right: 10px;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-60%);
             font-size: 1.8rem;
             letter-spacing: 1.8px;
             font-weight: bold;
@@ -1875,6 +1880,7 @@
                 right: -1px;
                 font-size: 3rem;
                 letter-spacing: 1.5px;
+                transform: translateY(-50%);
             }
         }
     }
