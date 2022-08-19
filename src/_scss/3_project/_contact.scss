@@ -149,6 +149,9 @@
         margin-top: 60px;
         border: none;
 
+        appearance: none;
+        appearance: none;
+
         @include mq(md, max) {
             width: 100%;
             font-size: 3.2rem;
@@ -366,6 +369,11 @@
             font-family: "Hiragino Kaku Gothic ProN", sans-serif;
             color: #ccc;
             cursor: pointer;
+
+            appearance: none;
+            background: url("../../assets/img/br_down.png") white no-repeat
+                calc(100% - 10px);
+            background-size: 10px;
 
             > option {
                 width: 130px;
