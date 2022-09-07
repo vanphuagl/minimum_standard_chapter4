@@ -15,7 +15,6 @@
     - [Building The App](#building-the-app)
     - [Testing The App Locally](#testing-the-app-locally)
   - [`.env` Files](#env-files)
-
 ## Setup
 
 Install pnpm
